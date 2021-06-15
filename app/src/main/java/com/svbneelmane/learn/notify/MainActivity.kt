@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun createWorkRequest() {
-        val worker = PeriodicWorkRequest.Builder(NotifyWorker::class.java, 16, TimeUnit.MINUTES)
+        val worker = PeriodicWorkRequest.Builder(NotifyWorker::class.java, 20, TimeUnit.SECONDS)
                 .build()
 
         WorkManager.getInstance(applicationContext).enqueue(worker)
